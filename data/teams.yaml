@@ -1,0 +1,96 @@
+ari:
+  loc: Arizona
+  name: Cardinals
+atl:
+  loc: Atlanta
+  name: Falcons
+bal:
+  loc: Baltimore
+  name: Ravens
+buf:
+  loc: Buffalo
+  name: Bills
+car:
+  loc: Carolina
+  name: Panthers
+chi:
+  loc: Chicago
+  name: Bears
+cin:
+  loc: Cincinnati
+  name: Bengals
+cle:
+  loc: Cleveland
+  name: Browns
+dal:
+  loc: Dallas
+  name: Cowboys
+den:
+  loc: Denver
+  name: Broncos
+det:
+  loc: Detroit
+  name: Lions
+gb:
+  loc: Green Bay
+  name: Packers
+hou:
+  loc: Houston
+  name: Texans
+ind:
+  loc: Indianapolis
+  name: Colts
+jax:
+  loc: Jacksonville
+  name: Jaguars
+kc:
+  loc: Kansas City
+  name: Chiefs
+lac:
+  loc: Los Angeles
+  name: Chargers
+lar:
+  loc: Los Angeles
+  name: Rams
+lv:
+  loc: Las Vegas
+  name: Raiders
+mia:
+  loc: Miami
+  name: Dolphins
+min:
+  loc: Minnesota
+  name: Vikings
+ne:
+  loc: New England
+  name: Patriots
+no:
+  loc: New Orleans
+  name: Saints
+nyg:
+  loc: New York
+  name: Giants
+nyj:
+  loc: New York
+  name: Jets
+phi:
+  loc: Philadelphia
+  name: Eagles
+pit:
+  loc: Pittsburg
+  name: Steelers
+sea:
+  loc: Seattle
+  name: Seahawks
+sf:
+  loc: San Francisco
+  name: 49ers
+tb:
+  loc: Tampa Bay
+  name: Buccaneers
+ten:
+  loc: Tennessee
+  name: Titans
+was:
+  loc: Washington
+  name: Commanders
