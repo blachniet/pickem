@@ -57,7 +57,7 @@
   <h1>{{.Title}}</h1>
   <table>
     <tbody>
-      {{ range $i, $r := getCSV "," "https://docs.google.com/spreadsheets/d/e/2PACX-1vTvbFaiT9blCX4dE5XpXpQjWtAW8I6nqpBhAM9nZukX4LeVNsMQieEbGQqvVBq0BMUOmwZdSOZHtzHy/pub?gid=0&single=true&output=csv" }}
+      {{ range $i, $r := getCSV "," "static/csv/2023w03.csv" }}
       {{ $away := index $.Site.Data.teams (index $r 0) }} 
       {{ $home := index $.Site.Data.teams (index $r 1) }} 
       <tr>
