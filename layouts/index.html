@@ -27,11 +27,13 @@
 
     <h2>Printable sheets</h2>
     {{- range site.RegularPages.GroupByParam "pickemSeason" }}
-    <strong>{{ .Key }} Season</strong>:
+    <p>
+    {{ .Key }} Season:
       {{- range $i, $p := .Pages }}
         {{ if $i }}-{{ end }}
         <a href="{{ .RelPermalink }}">Week {{ .Params.pickemWeek }}</a>
       {{- end }}
+    </p>
     {{- end }}
   </main>
 
