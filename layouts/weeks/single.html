@@ -13,6 +13,12 @@
       size: A4;
     }
 
+    @media print {
+      nav {
+        display: none;
+      }
+    }
+
     h1 {
       text-align: center;
     }
@@ -54,6 +60,11 @@
   </style>
 </head>
 <body>
+  <nav>
+    [ <a href="javascript:window.history.back()">⬅️ Back</a> ]
+    [ <a href="/">🏠 Home</a> ]
+    [ <a href="javascript:window.print()">🖨 Print this page</a> ]
+  </nav>
   <h1>{{.Title}}</h1>
   <table>
     <tbody>
