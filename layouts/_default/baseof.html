@@ -21,7 +21,7 @@
 <body>
   <header>
     <nav>
-      <a href="/">Home</a>
+      <a href="/" class="{{ if .IsHome }}current{{ end }}">Home</a>
       {{ if eq .Type "weeks" }}
       <a href="/">🖨 Print this page</a>
       {{ end }}
