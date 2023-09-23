@@ -15,21 +15,29 @@
   <main>
     <h2>How it works</h2>
     <p>
-    Print the pick'em sheet for the upcoming week. Grab some colored pencils and draw a letter/symbol next to the team you think will win for each matchup. Have your family and friends do the same thing. After all the games are complete add up the correct picks to see how got the most.
+    Print the pick'em sheet for the upcoming week. Grab some colored pencils and draw a letter or symbol next to the team you think will win for each matchup.
+    </p>
+    <p>
+    Have your family and friends do the same with a different color and letter or symbol. After all the games are complete add up the correct picks to see how got the most.
     </p>
 
+    <p class="notice">
+    Try laminating the sheet and use dry erase markers. Then, it's easy to change your picks before the game starts!
+    </p>
+
+    <h2>Printable sheets</h2>
     {{- range site.RegularPages.GroupByParam "pickemSeason" }}
-    <h2>{{ .Key }} Season</h2>
-      Week: {{- range $i, $p := .Pages }}
-        {{ if $i }}, {{ end }}
-        <a href="{{ .RelPermalink }}">{{ .Params.pickemWeek }}</a>
+    <strong>{{ .Key }} Season</strong>:
+      {{- range $i, $p := .Pages }}
+        {{ if $i }}-{{ end }}
+        <a href="{{ .RelPermalink }}">Week {{ .Params.pickemWeek }}</a>
       {{- end }}
     {{- end }}
   </main>
 
 </body>
   <footer>
-    <p>© 2023 <a href="https://blachniet.com/">Brian Lachniet</a></p>
+    <p>&copy; {{ now.Format "2006" }} <a href="https://blachniet.com/">Brian Lachniet</a></p>
 
     <p><a href="https://blachniet.com"><img src="https://blachniet.com/favicon.ico"></a></p>
 
@@ -38,7 +46,7 @@
     <a href="https://favicon.io/">favicon.io</a>,
     <a href="https://gohugo.io/">Hugo</a>,
     and
-    <a href="https://simplecss.org/">Simple.css</a>. Teams logos from <a href="https://www.nfl.com/teams/">NFL.com</a>. Schedules from <a href="https://www.espn.com/nfl/schedule">ESPN.com</a>.
+    <a href="https://simplecss.org/">Simple.css</a>. Teams logos from <a href="https://www.nfl.com/teams/">NFL.com</a>. Schedules from <a href="https://www.espn.com/nfl/schedule">ESPN.com</a>. See the source code on <a href="https://github.com/blachniet/pickem">GitHub</a>.
     </p>
   </footer>
 </html>
