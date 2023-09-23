@@ -1,4 +1,4 @@
-# Football Pick'ems
+# 🏈 Football Pick'ems
 
 ## Contributing
 
