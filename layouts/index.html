@@ -17,7 +17,7 @@
     <h2>{{ .Key }} Season</h2>
       Week: {{- range $i, $p := .Pages }}
         {{ if $i }}, {{ end }}
-        <a href="{{ .Permalink }}">{{ .Params.pickemWeek }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Params.pickemWeek }}</a>
       {{- end }}
     {{- end }}
   </main>
