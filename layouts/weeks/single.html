@@ -65,7 +65,7 @@
     [ <a href="/">🏠 Home</a> ]
     [ <a href="javascript:window.print()">🖨 Print this page</a> ]
   </nav>
-  <h1>{{.Title}}</h1>
+  <h1>Week {{ .Params.pickemWeek }} ({{ .Params.pickemSeason }} Season)</h1>
   <table>
     <tbody>
       {{ range $i, $r := getCSV "," (printf "content/%sdata.csv" .File.Dir) }}
