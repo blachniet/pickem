@@ -13,7 +13,7 @@
   </header>
 
   <main>
-    {{- range site.RegularPages.GroupByParam "pickemYear" }}
+    {{- range site.RegularPages.GroupByParam "pickemSeason" }}
     <h2>{{ .Key }} Season</h2>
       Week: {{- range $i, $p := .Pages }}
         {{ if $i }}, {{ end }}

@@ -1,12 +1,12 @@
 ---
 {{- $parts := split .File.File.ContentBaseName "w" }}
-{{- $year := int (index $parts 0) }}
+{{- $season := int (index $parts 0) }}
 {{- $week := int (index $parts 1) }}
-title: '{{ $year }} Week {{ $week }}'
+title: '{{ $season }} Week {{ $week }}'
 date: {{ .Date }}
 
 # See schedule at:
-# <https://www.espn.com/nfl/schedule/_/week/{{ $week }}/year/{{ $year }}/>
-pickemYear: {{ $year }}
+# <https://www.espn.com/nfl/schedule/_/week/{{ $week }}/year/{{ $season }}/>
+pickemSeason: {{ $season }}
 pickemWeek: {{ $week }}
 ---
