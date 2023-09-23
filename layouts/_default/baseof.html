@@ -20,6 +20,12 @@
 </head>
 <body>
   <header>
+    <nav>
+      <a href="/">Home</a>
+      {{ if eq .Type "weeks" }}
+      <a href="/">🖨 Print this page</a>
+      {{ end }}
+    </nav>
     <h1>🏈 Football Pick'ems</h1>
     <p>Printable NFL weekly pick'em sheets.</p>
   </header>
