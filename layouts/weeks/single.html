@@ -10,7 +10,7 @@
       grid-template-columns: 1fr;
     }
 
-    header, footer, div.controls {
+    header, footer, .notice {
       display: none;
     }
 
@@ -26,10 +26,6 @@
     td {
       break-inside: avoid;
     }
-  }
-
-  div.controls {
-    text-align: center;
   }
 
   h2 {
@@ -76,11 +72,11 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="controls">
-  <a class="button" href="javascript:window.print()">🖨 Print this page</a>
-</div>
-
 <h2>{{ .Title }}</h2>
+
+<p class="notice">
+You can <a href="javascript:window.print()">🖨 print this page</a>!
+</p>
 
 <table class="pickem-sheet">
   <tbody>
@@ -106,8 +102,4 @@
     {{ end }}
   </tbody>
 </table>
-
-<div class="controls">
-  <a class="button" href="javascript:window.print()">🖨 Print this page</a>
-</div>
 {{ end }}
