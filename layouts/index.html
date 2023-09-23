@@ -15,14 +15,10 @@
   <main>
     {{- range site.RegularPages.GroupByParam "pickemYear" }}
     <h2>{{ .Key }} Season</h2>
-    <ul>
-      {{- range .Pages }}
-      <li>
-        <a href="{{ .Permalink }}">Week {{ .Params.pickemWeek }}</a>
-        [ <a href="{{ .Permalink }}/data.csv">csv</a> ]
-      </li>
+      Week: {{- range $i, $p := .Pages }}
+        {{ if $i }}, {{ end }}
+        <a href="{{ .Permalink }}">{{ .Params.pickemWeek }}</a>
       {{- end }}
-    </ul>
     {{- end }}
   </main>
 
