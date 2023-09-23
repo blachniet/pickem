@@ -1,7 +1,7 @@
 ---
 {{- $parts := split .File.File.ContentBaseName "w" }}
 {{- $season := int (index $parts 0) }}
-{{- $week := int (index $parts 1) }}
+{{- $week := int (strings.TrimPrefix "0" (index $parts 1)) }}
 title: 'Week {{ $week }} ({{ $season }} Season)'
 date: {{ .Date }}
 
