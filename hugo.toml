@@ -1,3 +1,5 @@
 baseURL = 'https://pickem.blachniet.com/'
 languageCode = 'en-us'
 title = "Football Pick'ems"
+disableKinds = ['taxonomy', 'term']
+
