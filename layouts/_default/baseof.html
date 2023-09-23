@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}
+  </title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <style>
+  p.weeks a {
+    white-space: nowrap;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏈 Football Pick'ems</h1>
+    <p>Printable NFL weekly pick'em sheets.</p>
+  </header>
+
+  <main>
+    {{ block "main" . }}
+    {{end}}
+  </main>
+
+</body>
+  <footer>
+    <p>&copy; {{ now.Format "2006" }} <a href="https://blachniet.com/">Brian Lachniet</a></p>
+
+    <p><a href="https://blachniet.com"><img src="https://blachniet.com/favicon.ico"></a></p>
+
+    <p>
+    Built with
+    <a href="https://favicon.io/">favicon.io</a>,
+    <a href="https://gohugo.io/">Hugo</a>,
+    and
+    <a href="https://simplecss.org/">Simple.css</a>. Teams logos from <a href="https://www.nfl.com/teams/">NFL.com</a>. Schedules from <a href="https://www.espn.com/nfl/schedule">ESPN.com</a>. See the source code on <a href="https://github.com/blachniet/pickem">GitHub</a>.
+    </p>
+  </footer>
+</html>
