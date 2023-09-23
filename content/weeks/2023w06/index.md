@@ -1,5 +1,5 @@
 ---
-title: '2023 Week 6'
+title: 'Week 6 (2023 Season)'
 date: 2023-09-22T23:04:37-04:00
 
 # See schedule at:

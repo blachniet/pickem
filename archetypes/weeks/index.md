@@ -2,7 +2,7 @@
 {{- $parts := split .File.File.ContentBaseName "w" }}
 {{- $season := int (index $parts 0) }}
 {{- $week := int (index $parts 1) }}
-title: '{{ $season }} Week {{ $week }}'
+title: 'Week {{ $week }} ({{ $season }} Season)'
 date: {{ .Date }}
 
 # See schedule at:
