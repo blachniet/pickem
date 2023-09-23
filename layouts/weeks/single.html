@@ -57,7 +57,7 @@
   <h1>{{.Title}}</h1>
   <table>
     <tbody>
-      {{ range $i, $r := getCSV "," "static/csv/2023w03.csv" }}
+      {{ range $i, $r := getCSV "," (printf "content/%sdata.csv" .File.Dir) }}
       {{ $away := index $.Site.Data.teams (index $r 0) }} 
       {{ $home := index $.Site.Data.teams (index $r 1) }} 
       <tr>
