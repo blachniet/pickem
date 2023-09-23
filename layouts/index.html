@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Pick'ems</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Pick'ems</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <style>
+  p.weeks a {
+    white-space: nowrap;
+  }
+  </style>
 </head>
 <body>
   <header>
@@ -27,7 +32,7 @@
 
     <h2>Printable sheets</h2>
     {{- range site.RegularPages.GroupByParam "pickemSeason" }}
-    <p>
+    <p class="weeks">
     {{ .Key }} Season:
       {{- range $i, $p := .Pages.ByParam "pickemWeek" }}
         {{ if $i }}-{{ end }}
