@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Pick'ems</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <header>
+    <h1>🏈 Football Pick'ems</h1>
+    <p>Printable NFL weekly pick'em sheets.</p>
+  </header>
+
+  <main>
+    <ul>
+      {{ range where .Site.Pages "Section" "weeks" }}
+        {{ if .IsPage }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2023 <a href="https://blachniet.com/">Brian Lachniet</a></p>
+
+    <p><a href="https://blachniet.com"><img src="https://blachniet.com/favicon.ico"></a></p>
+
+    <p>
+    Built with
+    <a href="https://favicon.io/">favicon.io</a>,
+    <a href="https://gohugo.io/">Hugo</a>,
+    <a href="https://simplecss.org/">Simple.css</a>.
+    </p>
+  </footer>
+</body>
+</html>
+
