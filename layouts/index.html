@@ -29,7 +29,7 @@
     {{- range site.RegularPages.GroupByParam "pickemSeason" }}
     <p>
     {{ .Key }} Season:
-      {{- range $i, $p := .Pages }}
+      {{- range $i, $p := .Pages.ByParam "pickemWeek" }}
         {{ if $i }}-{{ end }}
         <a href="{{ .RelPermalink }}">Week {{ .Params.pickemWeek }}</a>
       {{- end }}
