@@ -57,7 +57,9 @@
   }
 
   table.pickem-sheet td.away {
-    width: 10%;
+    border-right: 1px solid;
+    text-align: left;
+    width: 50%;
   }
 
   table.pickem-sheet td.away-box {
@@ -70,11 +72,12 @@
   }
 
   table.pickem-sheet td.home {
-    width: 10%;
+    text-align: right;
+    width: 50%;
   }
 
   table.pickem-sheet img {
-    width: 75%;
+    width: 32px;
   }
 </style>
 {{ end }}
@@ -93,8 +96,6 @@ You can <a href="javascript:window.print()">🖨 print this page</a>!
     <!-- Required to set column widths for the table. -->
     <tr style="visibility: collapse">
       <td class="away" />
-      <td class="away-box" />
-      <td class="home-box" />
       <td class="home" />
     </tr>
 
@@ -112,8 +113,6 @@ You can <a href="javascript:window.print()">🖨 print this page</a>!
             {{end}}
           </div>
         </td>
-        <td class="away-box"></td>
-        <td class="home-box"></td>
         <td class="home">
           <img src="/logos/{{.home}}.webp">
           <div>
