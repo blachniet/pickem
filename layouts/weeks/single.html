@@ -39,6 +39,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.75rem;
     border-collapse: collapse;
+    table-layout: fixed;
     width: 100%;
   }
 
@@ -49,22 +50,26 @@
     border-top: 1px solid;
     padding: 0;
     text-align: center;
-    width: 25%;
   }
 
   table.pickem-sheet tr {
     background-color: unset;
   }
 
-  table.pickem-sheet tr > td:first-child {
+  table.pickem-sheet td.away {
     width: 10%;
   }
 
-  table.pickem-sheet tr > td:nth-child(2) {
+  table.pickem-sheet td.away-box {
     border-right: 1px solid;
+    width: 40%;
   }
 
-  table.pickem-sheet tr > td:nth-child(4) {
+  table.pickem-sheet td.home-box {
+    width: 40%;
+  }
+
+  table.pickem-sheet td.home {
     width: 10%;
   }
 
@@ -81,21 +86,63 @@
 You can <a href="javascript:window.print()">🖨 print this page</a>!
 </p>
 
+{{if .Params.pickemSchedule}}
+<table class="pickem-sheet">
+  <tbody>
+
+    <!-- Required to set column widths for the table. -->
+    <tr style="visibility: collapse">
+      <td class="away" />
+      <td class="away-box" />
+      <td class="home-box" />
+      <td class="home" />
+    </tr>
+
+  {{ range .Params.pickemSchedule }}
+    <tr>
+      <td class="day" colspan="4" style="text-align: center;">{{.day | humanize}}</td>
+    </tr>
+    {{ range .games }}
+      <tr class="game">
+        <td class="away">
+          <img src="/logos/{{.away}}.webp">
+          <div>
+            {{with index $.Site.Data.teams .away}}
+            {{.loc}} {{.name}}
+            {{end}}
+          </div>
+        </td>
+        <td class="away-box"></td>
+        <td class="home-box"></td>
+        <td class="home">
+          <img src="/logos/{{.home}}.webp">
+          <div>
+            {{with index $.Site.Data.teams .home}}
+            {{.loc}} {{.name}}
+            {{end}}
+          </div>
+        </td>
+      </tr>
+    {{end}}
+  {{end}}
+  </tbody>
+</table>
+{{else}}
 <table class="pickem-sheet">
   <tbody>
     {{ range $i, $r := getCSV "," (printf "content/%sdata.csv" .File.Dir) }}
     {{ $away := index $.Site.Data.teams (index $r 0) }} 
     {{ $home := index $.Site.Data.teams (index $r 1) }} 
-    <tr>
-      <td>
+    <tr class="game">
+      <td class="away">
         <img src="/logos/{{ index $r 0 }}.webp">
         <div>
           {{$away.loc}} {{$away.name}}
         </div>
       </td>
-      <td></td>
-      <td></td>
-      <td>
+      <td class="away-box"></td>
+      <td class="home-box"></td>
+      <td class="home">
         <img src="/logos/{{ index $r 1 }}.webp">
         <div>
           {{$home.loc}} {{$home.name}}
@@ -105,4 +152,5 @@ You can <a href="javascript:window.print()">🖨 print this page</a>!
     {{ end }}
   </tbody>
 </table>
+{{end}}
 {{ end }}
