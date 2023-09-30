@@ -14,4 +14,4 @@ bundle="weeks/${season}w$(printf '%02i' "${week}")"
 
 hugo new "${bundle}"
 open "https://www.espn.com/nfl/schedule/_/week/${week}/year/${season}/"
-nvim "content/${bundle}/data.csv"
+nvim "content/${bundle}/index.md"

@@ -9,4 +9,17 @@ date: {{ .Date }}
 # <https://www.espn.com/nfl/schedule/_/week/{{ $week }}/year/{{ $season }}/>
 pickemSeason: {{ $season }}
 pickemWeek: {{ $week }}
+pickemSchedule:
+- day: thu
+  games:
+  # - away: abc
+  #   home: dev
+- day: sun
+  games:
+  # - away: ghi
+  #   home: jkl
+- day: mon
+  games:
+  # - away: mno
+  #   home: pqr
 ---
