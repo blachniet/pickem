@@ -5,7 +5,7 @@
 Serve with Hugo.
 
 ```sh
-hugo serve
+hugo serve --navigateToChanged
 ```
 
 Add new weekly pick'em sheet.
