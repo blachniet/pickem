@@ -89,7 +89,6 @@
 You can <a href="javascript:window.print()">🖨 print this page</a>!
 </p>
 
-{{if .Params.pickemSchedule}}
 <table class="pickem-sheet">
   <tbody>
 
@@ -126,30 +125,4 @@ You can <a href="javascript:window.print()">🖨 print this page</a>!
   {{end}}
   </tbody>
 </table>
-{{else}}
-<table class="pickem-sheet">
-  <tbody>
-    {{ range $i, $r := getCSV "," (printf "content/%sdata.csv" .File.Dir) }}
-    {{ $away := index $.Site.Data.teams (index $r 0) }} 
-    {{ $home := index $.Site.Data.teams (index $r 1) }} 
-    <tr class="game">
-      <td class="away">
-        <img src="/logos/{{ index $r 0 }}.webp">
-        <div>
-          {{$away.loc}} {{$away.name}}
-        </div>
-      </td>
-      <td class="away-box"></td>
-      <td class="home-box"></td>
-      <td class="home">
-        <img src="/logos/{{ index $r 1 }}.webp">
-        <div>
-          {{$home.loc}} {{$home.name}}
-        </div>
-      </td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
-{{end}}
 {{ end }}
