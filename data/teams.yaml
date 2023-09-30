@@ -1,96 +1,130 @@
 ari:
   loc: Arizona
   name: Cardinals
+  logo: /logos/ari.webp
 atl:
   loc: Atlanta
   name: Falcons
+  logo: /logos/atl.webp
 bal:
   loc: Baltimore
   name: Ravens
+  logo: /logos/bal.webp
 buf:
   loc: Buffalo
   name: Bills
+  logo: /logos/buf.webp
 car:
   loc: Carolina
   name: Panthers
+  logo: /logos/car.webp
 chi:
   loc: Chicago
   name: Bears
+  logo: /logos/chi.webp
 cin:
   loc: Cincinnati
   name: Bengals
+  logo: /logos/cin.webp
 cle:
   loc: Cleveland
   name: Browns
+  logo: /logos/cle.webp
 dal:
   loc: Dallas
   name: Cowboys
+  logo: /logos/dal.webp
 den:
   loc: Denver
   name: Broncos
+  logo: /logos/den.webp
 det:
   loc: Detroit
   name: Lions
+  logo: /logos/det.webp
 gb:
   loc: Green Bay
   name: Packers
+  logo: /logos/gb.webp
 hou:
   loc: Houston
   name: Texans
+  logo: /logos/hou.webp
 ind:
   loc: Indianapolis
   name: Colts
+  logo: /logos/ind.webp
 jax:
   loc: Jacksonville
   name: Jaguars
+  logo: /logos/jax.webp
 kc:
   loc: Kansas City
   name: Chiefs
+  logo: /logos/kc.webp
 lac:
   loc: Los Angeles
   name: Chargers
+  logo: /logos/lac.webp
 lar:
   loc: Los Angeles
   name: Rams
+  logo: /logos/lar.webp
 lv:
   loc: Las Vegas
   name: Raiders
+  logo: /logos/lv.webp
 mia:
   loc: Miami
   name: Dolphins
+  logo: /logos/mia.webp
 min:
   loc: Minnesota
   name: Vikings
+  logo: /logos/min.webp
 ne:
   loc: New England
   name: Patriots
-'no':
+  logo: /logos/ne.webp
+'no': &nor
   loc: New Orleans
   name: Saints
+  logo: /logos/no.webp
+nor: *nor
 nyg:
   loc: New York
   name: Giants
+  logo: /logos/nyg.webp
 nyj:
   loc: New York
   name: Jets
+  logo: /logos/nyj.webp
 phi:
   loc: Philadelphia
   name: Eagles
+  logo: /logos/phi.webp
 pit:
   loc: Pittsburg
   name: Steelers
+  logo: /logos/pit.webp
 sea:
   loc: Seattle
   name: Seahawks
+  logo: /logos/sea.webp
 sf:
   loc: San Francisco
   name: 49ers
+  logo: /logos/sf.webp
 tb:
   loc: Tampa Bay
   name: Buccaneers
+  logo: /logos/tb.webp
 ten:
   loc: Tennessee
   name: Titans
-was:
+  logo: /logos/ten.webp
+was: &was
   loc: Washington
   name: Commanders
+  logo: /logos/was.webp
+wsh: *was

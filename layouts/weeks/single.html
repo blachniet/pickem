@@ -109,20 +109,20 @@ You can <a href="javascript:window.print()">🖨 print this page</a>!
     {{ range .games }}
       <tr class="game">
         <td class="away">
-          <img src="/logos/{{.away}}.webp">
+          {{with index $.Site.Data.teams .away}}
+          <img src="{{.logo}}">
           <div>
-            {{with index $.Site.Data.teams .away}}
             {{.loc}} {{.name}}
-            {{end}}
           </div>
+          {{end}}
         </td>
         <td class="home">
-          <img src="/logos/{{.home}}.webp">
+          {{with index $.Site.Data.teams .home}}
+          <img src="{{.logo}}">
           <div>
-            {{with index $.Site.Data.teams .home}}
             {{.loc}} {{.name}}
-            {{end}}
           </div>
+          {{end}}
         </td>
       </tr>
     {{end}}
