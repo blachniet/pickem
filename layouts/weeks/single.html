@@ -12,10 +12,6 @@
   }
 
   @media print {
-    body {
-      grid-template-columns: 1fr;
-    }
-
     header, footer, .notice {
       display: none;
     }
@@ -50,8 +46,8 @@
   table.pickem-sheet td {
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
+    border-bottom: 2px solid;
+    border-top: 2px solid;
     padding: 0;
     text-align: center;
   }
@@ -61,13 +57,13 @@
   }
 
   table.pickem-sheet td.away {
-    border-right: 1px solid;
+    border-right: 2px solid;
     text-align: left;
     width: 50%;
   }
 
   table.pickem-sheet td.away-box {
-    border-right: 1px solid;
+    border-right: 2px solid;
     width: 40%;
   }
 
@@ -90,7 +86,7 @@
 <h2>{{ .Title }}</h2>
 
 <p class="notice">
-You can <a href="javascript:window.print()">🖨 print this page</a>!
+You can <a href="javascript:window.print()">🖨️ print this page</a>!
 </p>
 
 <table class="pickem-sheet">
