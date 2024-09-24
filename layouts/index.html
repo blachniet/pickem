@@ -12,7 +12,7 @@ Try laminating the sheet and use dry erase markers. Then, it's easy to change yo
 </p>
 
 <h2>Printable sheets</h2>
-{{- range site.RegularPages.GroupByParam "pickemSeason" }}
+{{- range (site.RegularPages.GroupByParam "pickemSeason").Reverse }}
 <p class="weeks">
 {{ .Key }} Season:
   {{- range $i, $p := .Pages.ByParam "pickemWeek" }}
