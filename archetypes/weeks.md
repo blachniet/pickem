@@ -7,7 +7,7 @@ date: {{ .Date }}
 
 # See schedule at:
 # <https://www.espn.com/nfl/schedule/_/week/{{ $week }}/year/{{ $season }}/>
-pickemSeason: {{ $season }}
+pickemSeason: "{{ $season }}"
 pickemWeek: {{ $week }}
 pickemSchedule:
 - day: thu
