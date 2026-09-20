@@ -105,7 +105,7 @@ You can <a href="javascript:window.print()">🖨️ print this page</a>!
     {{ range .games }}
       <tr class="game">
         <td class="away">
-          {{with index $.Site.Data.teams .away}}
+          {{with index hugo.Data.teams .away}}
           <img src="{{.logo}}">
           <div>
             {{.loc}} {{.name}}
@@ -113,7 +113,7 @@ You can <a href="javascript:window.print()">🖨️ print this page</a>!
           {{end}}
         </td>
         <td class="home">
-          {{with index $.Site.Data.teams .home}}
+          {{with index hugo.Data.teams .home}}
           <img src="{{.logo}}">
           <div>
             {{.loc}} {{.name}}
